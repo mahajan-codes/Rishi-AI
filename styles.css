@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.content-section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Key Features section */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.feature {
+    background: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+}
+
+/* Use Cases section */
+.case-study button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* About section */
+#about p {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Contact Us */
+#contact button {
+    background: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #005f75;
+}

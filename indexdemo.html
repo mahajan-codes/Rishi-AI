@@ -1,0 +1,391 @@
+<html>
+<head>
+    <title>Rishi-AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-100 p-4 flex justify-between items-center fixed top-0 w-full z-50">
+        <div class="flex items-center">
+            <i class="fas fa-star text-red-500"></i>
+            <ul class="hidden md:flex space-x-4 ml-4">
+                <li><a href="#Home" class="text-black">Home</a></li>
+                <li><a href="#key-features" class="text-black">Products</a></li>
+                <li><a href="#About" class="text-black">About</a></li>
+                <li><a href="#Contact" class="text-black">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center">
+        </div>
+        <div class="relative">
+            <button class="menuToggle p-2 rounded-lg hover:bg-gray-200 transition-colors" id="menu-toggle">
+                <span class="sr-only">Menu</span>
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <div id="menu" class="hidden absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden">
+                <ul class="py-2">
+                    <li><a href="#Home" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+                    <li><a href="#key-features" class="block px-4 py-2 hover:bg-gray-100">Products</a></li>
+                    <li><a href="#About" class="block px-4 py-2 hover:bg-gray-100">About</a></li>
+                    <li><a href="#Contact" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- <nav class="bg-gray-100 p-4 flex justify-between items-center fixed top-0 w-full z-50">
+    <div class="flex items-center">
+        <i class="fas fa-star text-red-500"></i>
+        <ul class="hidden md:flex space-x-4 ml-4">
+            <li><a href="#Home" class="text-black">Home</a></li>
+            <li><a href="#key-features" class="text-black">Products</a></li>
+            <li><a href="#About" class="text-black">About</a></li>
+            <li><a href="#Contact" class="text-black">Contact Us</a></li>
+        </ul>
+    </div>
+    <!-- Enhanced Hamburger Icon 
+    <button class="block md:hidden text-2xl px-2 py-1" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav> -->
+
+
+
+
+<!-- Add padding to the body to account for fixed nav -->
+<style>
+    body {
+        padding-top: 64px; /* Adjust this value based on your nav height */
+    }
+    
+    /* Optional: Add animation to mobile menu */
+    #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+    
+    #mobile-menu.show {
+        transform: translateY(0);
+    }
+    /* ... existing styles ... */
+    
+    /* Enhanced hamburger menu styles */
+    #menu-toggle {
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    #menu-toggle:hover {
+        opacity: 0.7;
+    }
+    
+    #menu-toggle i {
+        font-size: 24px; /* Larger icon */
+    }
+</style>
+
+<!-- Updated JavaScript for Toggle Mobile Menu 
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        if (!mobileMenu.classList.contains('hidden')) {
+            // Add show class for animation
+            setTimeout(() => {
+                mobileMenu.classList.add('show');
+            }, 10);
+        } else {
+            mobileMenu.classList.remove('show');
+        }
+    });
+
+    // Optional: Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('show');
+        }
+    });
+</script> -->
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('hidden');
+        if (!menu.classList.contains('hidden')) {
+            setTimeout(() => {
+                menu.classList.add('show');
+            }, 10);
+        } else {
+            menu.classList.remove('show');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.add('hidden');
+            menu.classList.remove('show');
+        }
+    });
+</script>
+
+    <!-- Main Section -->
+    <section id="Home" class="bg-white p-8">
+
+     <section class="relative h-screen">
+    <!-- Background Image -->
+     <div class="absolute inset-0 w-full h-full">
+        <img src="path/to/your/image.jpg" alt="Hero Background" 
+        class="w-full h-full object-cover">
+        <!-- Optional dark overlay to make text more readable -->
+         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+    
+    <!-- Text Overlay -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
+        <h1 class="text-5xl md:text-6xl font-bold text-center mb-4">RISHI-AI</h1>
+        <p class="text-xl md:text-2xl text-center max-w-2xl px-4">TAG LINE COMES HERE</p>
+
+    </div>
+</section>
+</section>
+
+    <!-- Key Features Section -->
+    <!-- Key Features Section -->
+<!-- Key Features Section -->
+ <!-- Add this ID to your Key Features section -->
+<section id="key-features" class="bg-white p-8">
+    <section class="bg-white p-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto">
+        <!-- Feature 1 -->
+         <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold mb-3">Attribute Scoring & Customizable Risk Profiles</h3>
+            <p class="text-gray-600 mb-4">Assess individual attributes with precision—whether it's IP address, EIN, phone, or web agent data. Our system assigns a unique risk score to each attribute, then combines these to calculate an overall risk score for every user. With our flexible scoring model, you have the power to define what constitutes high, medium, or low risk, ensuring alignment with your organization’s specific risk tolerance levels.</p>            <div class="w-full h-48 overflow-hidden rounded-lg">
+                <img src="path/to/feature1-image.jpg" 
+                alt="Feature 1 illustration" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold mb-3">Detailed Attribute Intelligence</h3>
+            <p class="text-gray-600 mb-4"><b>IP Insights:</b> Determine the IP’s geographic location, ISP type (VPN, proxy, or residential), country, city, and state, for a complete view of the user’s digital footprint.</p>
+            <p class="text-gray-600 mb-4"><b>Phone Intelligence:</b> Get detailed insights into phone numbers, including line type, provider, and geographic origin.</p>
+            <p class="text-gray-600 mb-4"><b>TIN Validation:</b> Confirm TIN authenticity by cross-referencing IRS records for accuracy and verification.</p>
+            <p class="text-gray-600 mb-4"><b>Behavioral Analysis:</b> Track user patterns over time, such as device usage and access locations, to identify any irregularities or suspicious behaviors.</p>
+            <div class="w-full h-48 overflow-hidden rounded-lg">
+                <img src="path/to/feature2-image.jpg" 
+                     alt="Feature 2 illustration" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold mb-3">Behavioral Profiling & Drift Detection</h3>
+            <p class="text-gray-600 mb-4">Leverage behavioral intelligence to create a detailed profile for each user and detect deviations from established patterns. Identify when users operate from unusual devices, locations, or display other atypical behaviors that could signal potential threats.
+            </p>
+            <div class="w-full h-48 overflow-hidden rounded-lg">
+                <img src="path/to/feature3-image.jpg" 
+                     alt="Feature 3 illustration" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold mb-3">Modular & Flexible</h3>
+            <p class="text-gray-600 mb-4">Choose from individual modules—Phone, IP, Address, TIN, and Behavior—or access them all, depending on your specific needs. Easily integrate each module into your workflows and systems via API, making it seamless to pull in custom intelligence sources alongside the core data to drive more accurate decision-making.
+            </p>
+            <div class="w-full h-48 overflow-hidden rounded-lg">
+                <img src="path/to/feature4-image.jpg" 
+                     alt="Feature 4 illustration" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold mb-3">Adjustable Scoring Rules & Weights</h3>
+            <p class="text-gray-600 mb-4">Fine-tune risk assessments by setting custom scoring rules and weightings to reflect the unique priorities and criteria of your business. This allows you to shape the risk scoring to suit your exact needs.            </p>
+            <div class="w-full h-48 overflow-hidden rounded-lg">
+                <img src="path/to/feature5-image.jpg" 
+                     alt="Feature 5 illustration" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-2xl font-semibold mb-3">Real-Time ID Verification</h3>
+            <p class="text-gray-600 mb-4">Ensure secure customer interactions with our optional ID verification service, which includes real-time government ID validation, facial matching, and liveness checks to confirm user authenticity on the spot.</p>
+            <div class="w-full h-48 overflow-hidden rounded-lg">
+                <img src="path/to/feature6-image.jpg" 
+                     alt="Feature 6 illustration" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+<!-- Coming Soon & Use Cases Section -->
+<section class="bg-white p-8 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Coming Soon - USE CASES</h2>
+    
+    <div class="max-w-6xl mx-auto space-y-6">
+        <!-- Case Study 1 (Image on Right) -->
+        <div class="bg-blue-500 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex flex-col md:flex-row min-h-[300px]">
+                <!-- Content Container -->
+                <div class="w-full md:w-2/3 p-6 text-white flex flex-col justify-center">
+                    <h3 class="text-2xl font-semibold mb-3">Case Study 1</h3>
+                    <p class="mb-4 line-clamp-4 md:line-clamp-none">Detailed description of case study 1. This can be a longer text that explains the challenge, solution, and results in detail. The container will maintain its structure regardless of content length. You can add multiple paragraphs or longer descriptions without breaking the layout.</p>
+                    <button class="px-4 py-2 bg-white text-blue-500 rounded hover:bg-blue-100 transition-colors mt-auto md:mt-4 w-fit">
+                        Learn More
+                    </button>
+                </div>
+                <!-- Image Container -->
+                <div class="w-full md:w-1/3 h-64 md:h-auto">
+                    <img src="path/to/case1-image.jpg" 
+                         alt="Case Study 1" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 2 (Image on Left) -->
+        <div class="bg-blue-500 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex flex-col md:flex-row min-h-[300px]">
+                <!-- Image Container -->
+                <div class="w-full md:w-1/3 h-64 md:h-auto">
+                    <img src="path/to/case2-image.jpg" 
+                         alt="Case Study 2" 
+                         class="w-full h-full object-cover">
+                </div>
+                <!-- Content Container -->
+                <div class="w-full md:w-2/3 p-6 text-white flex flex-col justify-center">
+                    <h3 class="text-2xl font-semibold mb-3">Case Study 2</h3>
+                    <p class="mb-4 line-clamp-4 md:line-clamp-none">Detailed description of case study 2. The content will be vertically centered within its container, and the height will adjust automatically based on the content while maintaining the minimum height.</p>
+                    <button class="px-4 py-2 bg-white text-blue-500 rounded hover:bg-blue-100 transition-colors mt-auto md:mt-4 w-fit">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 3 (Image on Right) -->
+        <div class="bg-blue-500 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex flex-col md:flex-row min-h-[300px]">
+                <!-- Content Container -->
+                <div class="w-full md:w-2/3 p-6 text-white flex flex-col justify-center">
+                    <h3 class="text-2xl font-semibold mb-3">Case Study 3</h3>
+                    <p class="mb-4 line-clamp-4 md:line-clamp-none">Detailed description of case study 3. The layout will remain consistent whether the text is short or spans multiple paragraphs. Images will maintain their aspect ratio while filling their container.</p>
+                    <button class="px-4 py-2 bg-white text-blue-500 rounded hover:bg-blue-100 transition-colors mt-auto md:mt-4 w-fit">
+                        Learn More
+                    </button>
+                </div>
+                <!-- Image Container -->
+                <div class="w-full md:w-1/3 h-64 md:h-auto">
+                    <img src="path/to/case3-image.jpg" 
+                         alt="Case Study 3" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- About Us Section -->
+<section id="About" class="bg-white p-8">
+
+<section class="bg-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">About Us</h2>
+        
+        <!-- Company Description -->
+        <div class="space-y-6 text-gray-600 mb-12">
+            <p class="text-lg leading-relaxed">
+                Welcome to Rishi-AI, where we're revolutionizing the landscape of risk assessment and fraud prevention. Our cutting-edge AI-powered platform combines advanced analytics with comprehensive data intelligence to provide businesses with robust, reliable, and real-time risk evaluation solutions.
+            </p>
+            <p class="text-lg leading-relaxed">
+                Our mission is to empower organizations with intelligent risk assessment tools that adapt to evolving threats while maintaining operational efficiency. Through our innovative approach to attribute scoring and behavioral analysis, we're setting new standards in fraud prevention and risk management.
+            </p>
+            <p class="text-lg leading-relaxed">
+                With a team of experienced professionals in AI, machine learning, and risk assessment, we're committed to delivering solutions that not only protect your business but also enhance your decision-making capabilities.
+            </p>
+        </div>
+
+        <!-- Learn More Button -->
+        <a href="#key-features" 
+           class="inline-block px-8 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300 font-semibold">
+            Learn More
+        </a>
+    </div>
+</section>
+</section>
+
+<section id="Contact" class="bg-white p-8">
+
+    <!-- Contact Us Section -->
+<section class="bg-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact Us</h2>
+        
+        <!-- Contact Description -->
+        <div class="space-y-6 text-gray-600 mb-12">
+            <p class="text-xl leading-relaxed">
+                Ready to transform your risk assessment strategy?
+            </p>
+            <p class="text-lg leading-relaxed">
+                Explore our product and build the threat intelligence solution that works best for you!
+            </p>
+            
+        </div>
+
+        <!-- Time Booking Button -->
+        <a href="YOUR_BOOKING_URL_HERE" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-block px-8 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl">
+            Time Booking Page
+            <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+
+    <!-- Optional: Additional Contact Information
+    <div class="max-w-4xl mx-auto mt-12 text-center text-gray-500">
+        <p class="text-sm">
+            Prefer email? Reach us at: <a href="mailto:contact@example.com" class="text-blue-500 hover:text-blue-600">contact@example.com</a>
+        </p>
+    </div> -->
+</section>
+</section>
+    <!-- JavaScript to Toggle Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
